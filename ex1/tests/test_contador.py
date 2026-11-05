@@ -18,3 +18,6 @@ def test_tres_espacos_entre_bom_e_dia_dao_dois_itens():
 
 def test_quebra_de_linha_separa_palavras():
     assert contar_palavras("bom\ndia") == {"bom": 1, "dia": 1}
+
+def test_maiusculas_contam_como_minusculas():
+    assert contar_palavras("Dia dia DIA") == {"dia": 3}
