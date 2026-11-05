@@ -24,3 +24,6 @@ def test_maiusculas_contam_como_minusculas():
 
 def test_ponto_e_exclamacao_nas_bordas_sao_ignorados():
     assert contar_palavras("fim. Fim!") == {"fim": 2}
+
+def test_virgula_e_ponto_e_virgula_nas_bordas_sao_ignorados():
+    assert contar_palavras(",dia, ;dia;") == {"dia": 2}
