@@ -27,3 +27,6 @@ def test_ponto_e_exclamacao_nas_bordas_sao_ignorados():
 
 def test_virgula_e_ponto_e_virgula_nas_bordas_sao_ignorados():
     assert contar_palavras(",dia, ;dia;") == {"dia": 2}
+
+def test_dois_pontos_e_interrogacao_nas_bordas_sao_ignorados():
+    assert contar_palavras(":dia: ?dia?") == {"dia": 2}
