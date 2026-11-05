@@ -33,3 +33,6 @@ def test_dois_pontos_e_interrogacao_nas_bordas_sao_ignorados():
 
 def test_hifen_interno_faz_parte_da_palavra():
     assert contar_palavras("guarda-chuva") == {"guarda-chuva": 1}
+
+def test_texto_so_de_pontuacao_devolve_dicionario_vazio():
+    assert contar_palavras("... !") == {}
