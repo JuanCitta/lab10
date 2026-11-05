@@ -15,3 +15,6 @@ def test_dia_a_dia_soma_ocorrencias_de_dia():
 
 def test_tres_espacos_entre_bom_e_dia_dao_dois_itens():
     assert contar_palavras("bom   dia") == {"bom": 1, "dia": 1}
+
+def test_quebra_de_linha_separa_palavras():
+    assert contar_palavras("bom\ndia") == {"bom": 1, "dia": 1}
