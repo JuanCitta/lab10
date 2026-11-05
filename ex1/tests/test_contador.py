@@ -21,3 +21,6 @@ def test_quebra_de_linha_separa_palavras():
 
 def test_maiusculas_contam_como_minusculas():
     assert contar_palavras("Dia dia DIA") == {"dia": 3}
+
+def test_ponto_e_exclamacao_nas_bordas_sao_ignorados():
+    assert contar_palavras("fim. Fim!") == {"fim": 2}
